@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #34d399;        /* Ecomclub accent: emerald */
+  --color-brand-dark: #10b981;
+  --color-ink: #0b1220;          /* dark background */
+  --color-ink-light: #111a2e;
+  --font-sans: "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+details summary::-webkit-details-marker { display: none; }
