@@ -9,4 +9,26 @@
 }
 
 html { scroll-behavior: smooth; }
-details summary::-webkit-details-marker { display: none; }
+body { padding-bottom: 4.5rem; }           /* room for sticky mobile CTA */
+@media (min-width: 768px) { body { padding-bottom: 0; } }
+
+/* Benefit cards */
+.card { @apply rounded-2xl border border-white/10 bg-ink p-8 transition hover:border-brand/40 hover:-translate-y-0.5; }
+.card .icon { @apply mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-brand/15 text-xl; }
+
+/* Form fields */
+.field { @apply w-full rounded-xl border-0 bg-white px-4 py-3 text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-ink; }
+
+/* FAQ */
+.faq { @apply rounded-2xl border border-white/10 bg-ink p-6 transition; }
+.faq[open] { @apply border-brand/40; }
+.faq summary { @apply flex cursor-pointer list-none items-center justify-between font-semibold; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; @apply text-xl text-brand; }
+.faq[open] summary::after { content: "−"; }
+.faq p { @apply mt-3 leading-relaxed text-white/60; }
+
+/* Reveal on scroll */
+[data-reveal] { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+[data-reveal].is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1; transform: none; transition: none; } }

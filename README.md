@@ -20,7 +20,16 @@ npm run build
 
 Output goes to `dist/`.
 
-## Editing
+## Settings you will want to change
 
-- All content is in `index.html`.
+Open `src/config.js`:
+
+- `FORM_EMAIL` — the email that receives join-form submissions (sent through formsubmit.co, free).
+  The first submission triggers a one-time confirmation email from formsubmit.co — click "Activate" in it.
+- `SUBSCRIBE_URL` — your payment page (Stripe / Whop) or Discord invite. Every "join" button points here.
+
+## Editing content
+
+- All text and sections are in `index.html`.
 - Colors and font are in `src/style.css` (`--color-brand`, `--color-ink`).
+- Favicon: `public/favicon.svg`. Social share image: `public/og.png` (1200×630).
