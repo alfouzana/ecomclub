@@ -3,7 +3,7 @@
 
 // Email that receives join-form submissions (via formsubmit.co).
 // Leave empty to fall back to a mailto: link.
-export const FORM_EMAIL = "";
+export const FORM_EMAIL = "Getmoneydallah@gmail.com";
 
 // Your $30/month payment page (Stripe, Whop, etc.) or Discord invite.
 // Leave empty and all "join" buttons scroll to the form instead.
